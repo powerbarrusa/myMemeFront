@@ -6,6 +6,7 @@ NavLink
 class Home extends Component {
 
   render() {
+    console.log(this.props.exampleProp)
     return (
       <div className="row">
         <p className="col s8 m4 offset-s2 offset-m4">myMeme</p>
