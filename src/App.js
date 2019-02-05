@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      memes: []
+      memes: ""
     }
   }
 
@@ -24,6 +24,9 @@ class App extends Component {
     console.log(this.state.memes)
     return (
       <div className="App">
+        {this.state.memes ? <img src={this.state.memes[0].image_url}></img> : ""}
+        <a href="form.js" class="btn-floating btn-large waves-effect waves-light red" onSubmit="return false"><i class="material-icons" >add</i></a>
+
       </div>
     );
   }
