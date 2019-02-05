@@ -2,12 +2,9 @@ import React, { Component } from 'react'
 import './App.css'
 import {
 Route,
-NavLink,
 BrowserRouter,
-Switch,
-Redirect,
-Link
-} from "react-router-dom";
+Switch
+} from "react-router-dom"
 import Form from './components/form.js'
 import YourMemes from './components/yourMemes.js'
 import RandomMeme from './components/randomMeme.js'
@@ -51,4 +48,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
