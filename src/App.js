@@ -1,5 +1,17 @@
 import React, { Component } from 'react'
 import './App.css'
+import {
+Route,
+NavLink,
+BrowserRouter,
+Switch,
+Redirect,
+Link
+} from "react-router-dom";
+import Form from './components/form.js'
+import YourMemes from './components/yourMemes.js'
+import RandomMeme from './components/randomMeme.js'
+import Home from './components/home.js'
 
 class App extends Component {
   constructor() {
@@ -23,15 +35,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="row">
-          <p className="col s8 m4 offset-s2 offset-m4">myMeme</p>
-          <a href="/#" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn red">button</a>
-          <a href="/#" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn blue">button</a>
-          <a href="/#" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn green">button</a>
+      <BrowserRouter>
+        <div className="App">
+          <div className="content">
+            <Switch>
+              <Route path="/" exact component={Home}/>
+              <Route path="/form" component={Form} />
+              <Route path="/yourMemes" component={YourMemes} />
+              <Route path="/randomMeme" component={RandomMeme} />
+            </Switch>
+          </div>
         </div>
-
-      </div>
+      </BrowserRouter>
     )
   }
 }

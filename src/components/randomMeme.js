@@ -8,17 +8,16 @@ Redirect,
 Link
 } from "react-router-dom";
 
-class Form extends Component {
+class RandomMeme extends Component {
 
   render() {
     return (
       <div className="App">
         <NavLink exact to="/"><i class="material-icons">home</i></NavLink>
 
-
       </div>
     );
   }
 }
 
-export default Form;
+export default RandomMeme;
