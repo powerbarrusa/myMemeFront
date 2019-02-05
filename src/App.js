@@ -36,10 +36,15 @@ class App extends Component {
         <div className="App">
           <div className="content">
             <Switch>
-              <Route path="/" exact render={() => <Home exampleProp="hello" />}/>
+              <Route path="/" exact render={() => <Home/>}/>
               <Route path="/form" render={() => <Form/>}/>
-              <Route path="/yourMemes" render={() => <YourMemes/>}/>
+
+              
+             
+
+              <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
+
             </Switch>
           </div>
         </div>
