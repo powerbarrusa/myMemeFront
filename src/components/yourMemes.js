@@ -9,7 +9,6 @@ class YourMemes extends Component {
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
-
       </div>
     );
   }
