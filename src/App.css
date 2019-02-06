@@ -26,6 +26,32 @@ a {
   color: black;
 }
 
+.override {
+  display:flex;
+  flex-direction: column;
+
+}
+
+.random-image {
+  border-radius: 50%;
+}
+
+.top-text {
+  position: relative;
+  text-align: center;
+  top: 50px;
+  color: black;
+  font-size: 30px;
+}
+
+.bottom-text {
+  position: relative;
+  text-align: center;
+  bottom: 50px;
+  color: black;
+  font-size: 30px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
