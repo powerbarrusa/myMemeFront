@@ -14,7 +14,6 @@ class RandomMeme extends Component {
 
   render() {
     console.log(this.props.state)
-    console.log(this.props.state[0])
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
@@ -23,7 +22,7 @@ class RandomMeme extends Component {
           <div className="col s12">
             <div className="card">
               <div className="card-image">
-                {/* <img src={this.props.state[1].image} alt="" /> */}
+                <img src={this.props.state ? this.props.state[1].image : "error"} alt="" />
                 <span className="card-title">Card Title</span>
               </div>
               <div className="card-content">
