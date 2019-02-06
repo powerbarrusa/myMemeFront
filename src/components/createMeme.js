@@ -9,6 +9,17 @@ class CreateMeme extends Component {
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
+        <div className="row">
+          <div className="col s12 m7">
+            <div className="card">
+              <div className="card-image">
+                <h1 className="">Top</h1>
+                <img className="" src="https://imgflip.com/s/meme/Is-This-A-Pigeon.jpg" alt=""/>
+                <h1 className="">Bottom</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="column">
             <div>
               <div className="input-field col s6">
