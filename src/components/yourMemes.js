@@ -6,6 +6,7 @@ NavLink
 class YourMemes extends Component {
 
   render() {
+
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
@@ -18,6 +19,7 @@ class YourMemes extends Component {
                     <h1 className="topText">{meme.bottom_text}</h1>
                     <img className="image" src={meme.image_url}></img>
                     <h1 className="bottomText">{meme.top_text}</h1>
+
                   </div>
                 </div>
               </div>
