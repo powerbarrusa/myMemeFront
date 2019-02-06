@@ -37,11 +37,21 @@ a {
     position: absolute;
     top: -15px;
     z-index: 1;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
   .bottomText {
     position: absolute;
     bottom: 0px;
     z-index: 1;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
   h1 {
     font-size: 50px;
@@ -71,14 +81,28 @@ a {
 @media only screen and (min-width: 768px ) {
 .topText {
   position: absolute;
-  top: -10px;
+  top: 20px;
   z-index: 1;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 .bottomText {
   position: absolute;
   bottom: 20px;
   z-index: 1;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 .center {
   margin-left: 425px;

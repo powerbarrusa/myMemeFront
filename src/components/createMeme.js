@@ -9,19 +9,23 @@ class CreateMeme extends Component {
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
-        <div className="row">
+        <div className="row center">
           <div className="col s12 m7">
             <div className="card">
-              <div className="card-image">
-                <h1 className="">{this.props.CardTop}</h1>
+              <div className="card-image align">
+                <h1 className="topText">{this.props.CardTop}</h1>
                 <img className="" src={this.props.CardImg} alt=""/>
-                <h1 className="">{this.props.CardBottom}</h1>
+                <h1 className="bottomText">{this.props.CardBottom}</h1>
               </div>
             </div>
           </div>
         </div>
         <div className="column">
             <div>
+            <div className="input-field col s6">
+              <input id="image-url" type="text" className="validate" onChange={this.props.ChangeImg}></input>
+              <label htmlFor="image-url">Image_URL</label>
+            </div>
               <div className="input-field col s6">
                 <input id="top-text" type="text" className="validate" onChange={this.props.ChangeTop}></input>
                 <label htmlFor="top-text">Top Text</label>
@@ -29,10 +33,6 @@ class CreateMeme extends Component {
               <div className="input-field col s6">
                 <input id="bottom-text" type="text" className="validate" onChange={this.props.ChangeBottom}></input>
                 <label htmlFor="bottom-text">Bottom Text</label>
-              </div>
-              <div className="input-field col s6">
-                <input id="image-url" type="text" className="validate" onChange={this.props.ChangeImg}></input>
-                <label htmlFor="image-url">Image_URL</label>
               </div>
             </div>
             <NavLink exact to="/yourMemes">
