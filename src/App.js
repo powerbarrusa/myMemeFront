@@ -15,7 +15,6 @@ class App extends Component {
     super()
     this.state = {
       memes: "",
-      hasMeme: false,
       randomMeme: "",
       randomTopText: "",
       randomBottomText: ""
@@ -40,14 +39,13 @@ class App extends Component {
   }
 
   randomMeme = () => {
-    console.log(this.state.memes)
     const randomIndex = this.getRandom(this.state.memes.length)
       const randomMeme = this.state.memes[randomIndex]
       this.setState({
         hasMeme: true,
-        randomMeme: randomMeme.image,
-        // randomTopText: randomTopText.top_text,
-        // randomBottomText: randomBottomText.bottom_text
+        randomMemeImg: randomMeme.image,
+        randomTopText: randomMeme.top_text,
+        randomBottomText: randomMeme.bottom_text
       })
     }
 
@@ -63,6 +61,9 @@ class App extends Component {
               <Route path="/randomMeme" render={() => <RandomMeme
                   memes={this.state.memes}
                   randomMeme={this.randomMeme}
+                  randomMemeImg={this.state.randomMemeImg}
+                  randomTopText={this.state.randomTopText}
+                  randomBottomText={this.state.randomBottomText}
                 />}
               />
             </Switch>
