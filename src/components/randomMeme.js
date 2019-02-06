@@ -11,11 +11,11 @@ class RandomMeme extends Component {
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
         <p><button onClick={this.props.randomMeme} type="button" className="waves-effect waves-light btn red">Hit me with another!</button></p>
         <div className="row">
-          <div className="col s12">
+          <div className="col s12 m7">
             <div className="card">
               <div className="card-image align">
                 <h1 className="topText">{this.props.randomTopText}</h1>
-                <img className="random-image" src={this.props.randomMemeImg} alt="" />
+                <img className="image" src={this.props.randomMemeImg} alt="" />
                 <h1 className="bottomText">{this.props.randomBottomText}</h1>
               </div>
             </div>
