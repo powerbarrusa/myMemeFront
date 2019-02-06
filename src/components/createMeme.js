@@ -13,9 +13,9 @@ class CreateMeme extends Component {
           <div className="col s12 m7">
             <div className="card">
               <div className="card-image">
-                <h1 className="">Top</h1>
-                <img className="" src="https://imgflip.com/s/meme/Is-This-A-Pigeon.jpg" alt=""/>
-                <h1 className="">Bottom</h1>
+                <h1 className="">{this.props.CardTop}</h1>
+                <img className="" src={this.props.CardImg} alt=""/>
+                <h1 className="">{this.props.CardBottom}</h1>
               </div>
             </div>
           </div>

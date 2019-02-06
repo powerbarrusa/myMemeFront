@@ -19,7 +19,7 @@ class App extends Component {
       memes: "",
       randomMeme: "",
       randomTopText: "",
-      randomBottomText: ""
+      randomBottomText: "",
       top_text: "",
       bottom_text: "",
       image_url: "",
@@ -121,7 +121,6 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home exampleProp="hello" />}/>
-              <Route path="/form" render={() => <Form/>}/>
               <Route path="/yourMemes" render={() => <YourMemes/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme
                   memes={this.state.memes}
@@ -132,11 +131,16 @@ class App extends Component {
                 />}
               />
               <Route path="/" exact render={() => <Home/>}/>
-              <Route path="/createMeme" render={() =>
-                <CreateMeme
-                  ChangeTop ={this.onChangeTopText}
-                  ChangeBottom ={this.onChangeBottomText}
-                  ChangeImg ={this.onChangeImgUrl}
+
+              <Route path="/createMeme" render={() => 
+                <CreateMeme 
+                  CardTop={this.state.top_text}
+                  CardBottom={this.state.bottom_text}
+                  CardImg={this.state.image_url}
+                  ChangeTop={this.onChangeTopText} 
+                  ChangeBottom={this.onChangeBottomText} 
+                  ChangeImg={this.onChangeImgUrl} 
+
                   Submit={this.onSubmit}
                   />
                 }/>
