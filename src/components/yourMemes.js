@@ -17,7 +17,7 @@ class YourMemes extends Component {
                 <div className="card">
                   <div className="card-image align">
                     <div className="icons">
-                      <i className="material-icons iconBack">create</i>
+                      <NavLink exact to="/editMeme"><i className="material-icons iconBack">create</i></NavLink>
                       <i className="material-icons iconBack" id={meme.id} onClick={this.props.delete}>delete</i>
                     </div>
                     <h1 className="topText">{meme.bottom_text}</h1>

@@ -7,7 +7,7 @@ Switch
 } from "react-router-dom"
 
 import CreateMeme from './components/createMeme.js'
-
+import EditMeme from './components/editMeme.js'
 import YourMemes from './components/yourMemes.js'
 import RandomMeme from './components/randomMeme.js'
 import Home from './components/home.js'
@@ -29,12 +29,12 @@ class App extends Component {
     this.setState({
       top_text: e.target.value,
     })
-  }    
+  }
   onChangeBottomText = (e) => {
     this.setState({
       bottom_text: e.target.value,
     })
-  }    
+  }
   onChangeImgUrl = (e) => {
     this.setState({
       image_url: e.target.value,
@@ -102,14 +102,22 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home/>}/>
-              <Route path="/createMeme" render={() => 
-                <CreateMeme 
-                  ChangeTop ={this.onChangeTopText} 
-                  ChangeBottom ={this.onChangeBottomText} 
-                  ChangeImg ={this.onChangeImgUrl} 
+              <Route path="/createMeme" render={() =>
+                <CreateMeme
+                  ChangeTop ={this.onChangeTopText}
+                  ChangeBottom ={this.onChangeBottomText}
+                  ChangeImg ={this.onChangeImgUrl}
                   Submit={this.onSubmit}
                   />
                 }/>
+                <Route path="/editMeme" render={() =>
+                  <EditMeme
+                    ChangeTop ={this.onChangeTopText}
+                    ChangeBottom ={this.onChangeBottomText}
+                    ChangeImg ={this.onChangeImgUrl}
+                    Submit={this.onSubmit}
+                    />
+                  }/>
               <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
 
