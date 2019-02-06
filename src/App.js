@@ -30,6 +30,20 @@ class App extends Component {
     }
   }
 
+  delete = (event) => {
+    fetch(`http://localhost:3001/${event.target.id}`, {
+      method: 'DELETE'
+    }).then(response => {response.json()})
+    .then(data => data)
+
+    let memes = [...this.state.memes]
+    memes.splice(event.target.id - 1, 1)
+
+    this.setState({
+      memes: memes
+    })
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -39,10 +53,10 @@ class App extends Component {
               <Route path="/" exact render={() => <Home/>}/>
               <Route path="/form" render={() => <Form/>}/>
 
-              
-             
 
-              <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes}/>}/>
+
+
+              <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
 
             </Switch>
