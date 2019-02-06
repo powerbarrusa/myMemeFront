@@ -17,7 +17,7 @@ class YourMemes extends Component {
                 <div class="card">
                   <div class="card-image">
                     <h1 className="topText">Card Title</h1>
-                    <img className="image" src={meme.image_url}></img>
+                    <img className="image" src={meme.image_url} alt=""></img>
                     <h1 className="bottomText">Card Title</h1>
                   </div>
                 </div>

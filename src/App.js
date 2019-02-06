@@ -5,7 +5,7 @@ Route,
 BrowserRouter,
 Switch
 } from "react-router-dom"
-import Form from './components/form.js'
+import CreateMeme from './components/createMeme.js'
 import YourMemes from './components/yourMemes.js'
 import RandomMeme from './components/randomMeme.js'
 import Home from './components/home.js'
@@ -37,7 +37,7 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home/>}/>
-              <Route path="/form" render={() => <Form/>}/>
+              <Route path="/createMeme" render={() => <CreateMeme/>}/>
 
               
              
