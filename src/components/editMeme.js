@@ -14,7 +14,7 @@ class EditMeme extends Component {
             <div className="card">
               <div className="card-image align">
                 <h1 className="topText">{this.props.bottom_text}</h1>
-                <img className="image" src={this.props.image_url}/>
+                <img className="image" alt="" src={this.props.image_url}/>
                 <h1 className="bottomText">{this.props.top_text}</h1>
               </div>
             </div>
