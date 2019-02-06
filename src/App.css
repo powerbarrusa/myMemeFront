@@ -26,29 +26,71 @@ a {
   color: black;
 }
 
-.override {
-  display:flex;
+.iconBack {
+  background-color: none;
+  font-size: 30px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 414px ) {
+  .topText {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+  }
+  .bottomText {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconLeft {
+    position: relative;
+    left: -180px;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: 315px;
+    z-index: 2;
+  }
+}
+
+@media only screen and (min-width: 768px ) {
+  .topText {
+    position: absolute;
+    top: -10px;
+    left: 75px;
+    z-index: 1;
+  }
+
+.bottomText {
+  position: absolute;
+  bottom: 10px;
+  left: 125px;
+  z-index: 1;
+}
+.center {
+  margin-left: 425px;
+}
+.align {
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.random-image {
-  border-radius: 50%;
-}
-
-.top-text {
-  position: relative;
-  text-align: center;
-  top: 50px;
-  color: black;
-  font-size: 30px;
-}
-
-.bottom-text {
-  position: relative;
-  text-align: center;
-  bottom: 50px;
-  color: black;
-  font-size: 30px;
 }
 
 @keyframes App-logo-spin {
