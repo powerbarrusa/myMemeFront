@@ -17,12 +17,12 @@ class App extends Component {
     super()
     this.state = {
       memes: "",
-      randomMeme: "",
+      randomMemeImg: "",
       randomTopText: "",
       randomBottomText: "",
       top_text: "",
       bottom_text: "",
-      image_url: "",
+      image_url: ""
     }
     this.onSubmit = this.onSubmit.bind(this)
   }
@@ -67,7 +67,7 @@ class App extends Component {
       const randomMeme = this.state.memes[randomIndex]
       this.setState({
         hasMeme: true,
-        randomMemeImg: randomMeme.image,
+        randomMemeImg: randomMeme.image_url,
         randomTopText: randomMeme.top_text,
         randomBottomText: randomMeme.bottom_text
       })
@@ -121,7 +121,6 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home exampleProp="hello" />}/>
-              <Route path="/yourMemes" render={() => <YourMemes/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme
                   memes={this.state.memes}
                   randomMeme={this.randomMeme}
@@ -132,15 +131,14 @@ class App extends Component {
               />
               <Route path="/" exact render={() => <Home/>}/>
 
-              <Route path="/createMeme" render={() => 
-                <CreateMeme 
+              <Route path="/createMeme" render={() =>
+                <CreateMeme
                   CardTop={this.state.top_text}
                   CardBottom={this.state.bottom_text}
                   CardImg={this.state.image_url}
-                  ChangeTop={this.onChangeTopText} 
-                  ChangeBottom={this.onChangeBottomText} 
-                  ChangeImg={this.onChangeImgUrl} 
-
+                  ChangeTop={this.onChangeTopText}
+                  ChangeBottom={this.onChangeBottomText}
+                  ChangeImg={this.onChangeImgUrl}
                   Submit={this.onSubmit}
                   />
                 }/>
@@ -152,7 +150,6 @@ class App extends Component {
                     />
                   }/>
               <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
-              <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
             </Switch>
           </div>
         </div>

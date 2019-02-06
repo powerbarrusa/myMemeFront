@@ -13,10 +13,10 @@ class RandomMeme extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card">
-              <div className="card-image">
-                <p className="top-text">{this.props.randomTopText}</p>
+              <div className="card-image align">
+                <h1 className="topText">{this.props.randomTopText}</h1>
                 <img className="random-image" src={this.props.randomMemeImg} alt="" />
-                <p className="bottom-text">{this.props.randomBottomText}</p>
+                <h1 className="bottomText">{this.props.randomBottomText}</h1>
               </div>
             </div>
           </div>
