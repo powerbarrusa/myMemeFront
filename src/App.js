@@ -17,6 +17,9 @@ class App extends Component {
     super()
     this.state = {
       memes: "",
+      randomMeme: "",
+      randomTopText: "",
+      randomBottomText: ""
       top_text: "",
       bottom_text: "",
       image_url: "",
@@ -52,6 +55,23 @@ class App extends Component {
       console.log(error)
     }
   }
+
+
+  getRandom (max) {
+    const min = 0
+    return Math.floor(Math.random() * (max - min)) + min
+  }
+
+  randomMeme = () => {
+    const randomIndex = this.getRandom(this.state.memes.length)
+      const randomMeme = this.state.memes[randomIndex]
+      this.setState({
+        hasMeme: true,
+        randomMemeImg: randomMeme.image,
+        randomTopText: randomMeme.top_text,
+        randomBottomText: randomMeme.bottom_text
+      })
+    }
 
 
   delete = (event) => {
@@ -94,13 +114,23 @@ class App extends Component {
         })
     }
 
-
   render() {
     return (
       <BrowserRouter>
         <div className="App">
           <div className="content">
             <Switch>
+              <Route path="/" exact render={() => <Home exampleProp="hello" />}/>
+              <Route path="/form" render={() => <Form/>}/>
+              <Route path="/yourMemes" render={() => <YourMemes/>}/>
+              <Route path="/randomMeme" render={() => <RandomMeme
+                  memes={this.state.memes}
+                  randomMeme={this.randomMeme}
+                  randomMemeImg={this.state.randomMemeImg}
+                  randomTopText={this.state.randomTopText}
+                  randomBottomText={this.state.randomBottomText}
+                />}
+              />
               <Route path="/" exact render={() => <Home/>}/>
               <Route path="/createMeme" render={() => 
                 <CreateMeme 
@@ -112,7 +142,6 @@ class App extends Component {
                 }/>
               <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
-
             </Switch>
           </div>
         </div>
