@@ -26,18 +26,39 @@ a {
   color: black;
 }
 
-.topText {
-  position: absolute;
-  top: -10px;
-  left: 250px;
-  z-index: 1;
+@media only screen and (max-width: 414px ) {
+  .topText {
+    position: absolute;
+    top: -30px;
+    z-index: 1;
+  }
+  .bottomText {
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+  }
+  h1 {
+    font-size: 50px;
+  }
 }
 
-.bottomText {
-  position: absolute;
-  bottom: 10px;
-  left: 250px;
-  z-index: 1;
+@media only screen and (min-width: 768px ) {
+  .topText {
+    position: absolute;
+    top: -10px;
+    left: 75px;
+    z-index: 1;
+  }
+
+  .bottomText {
+    position: absolute;
+    bottom: 10px;
+    left: 125px;
+    z-index: 1;
+  }
+  .center {
+    margin-left: 425px;
+  }
 }
 
 @keyframes App-logo-spin {
