@@ -5,7 +5,9 @@ Route,
 BrowserRouter,
 Switch
 } from "react-router-dom"
+
 import CreateMeme from './components/createMeme.js'
+
 import YourMemes from './components/yourMemes.js'
 import RandomMeme from './components/randomMeme.js'
 import Home from './components/home.js'
@@ -22,6 +24,7 @@ class App extends Component {
     this.onSubmit = this.onSubmit.bind(this)
   }
 
+
   onChangeTopText = (e) => {
     this.setState({
       top_text: e.target.value,
@@ -37,7 +40,6 @@ class App extends Component {
       image_url: e.target.value,
     })
   }
-
 
   async componentDidMount(){
     try {
@@ -84,6 +86,7 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home/>}/>
+
               <Route path="/createMeme" render={() => 
                 <CreateMeme 
                   ChangeTop ={this.onChangeTopText} 
@@ -92,6 +95,7 @@ class App extends Component {
                   Submit={this.onSubmit}
                   />
                 }/>
+
 
               <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>

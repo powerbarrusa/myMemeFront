@@ -11,7 +11,9 @@ class RandomMeme extends Component {
   }
 
   render() {
-    console.log(this.props.state)
+
+    this.props.state ? console.log(this.props.state[0].image_url) : console.log('no')
+
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
