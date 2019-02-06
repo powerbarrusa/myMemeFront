@@ -27,15 +27,22 @@ a {
 }
 
 
+.iconBack {
+  background-color: none;
+  font-size: 30px;
+  margin: 5px;
+}
+
+
 @media only screen and (max-width: 414px ) {
   .topText {
     position: absolute;
-    top: -30px;
+    top: -15px;
     z-index: 1;
   }
   .bottomText {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     z-index: 1;
   }
   h1 {
@@ -52,6 +59,14 @@ a {
     font-size: 50px;
     margin-top: 10px;
     margin-left: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: 315px;
+    z-index: 2;
   }
 }
 

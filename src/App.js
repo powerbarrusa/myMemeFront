@@ -53,6 +53,21 @@ class App extends Component {
     }
   }
 
+
+  delete = (event) => {
+    fetch(`http://localhost:3001/${event.target.id}`, {
+      method: 'DELETE'
+    }).then(response => {response.json()})
+    .then(data => data)
+
+    let memes = [...this.state.memes]
+    memes.splice(event.target.id - 1, 1)
+
+    this.setState({
+      memes: memes
+    })
+  }
+
   onSubmit () {
     var url = 'http://localhost:3001/createMeme'
     var data = {
@@ -79,6 +94,7 @@ class App extends Component {
         })
     }
 
+
   render() {
     return (
       <BrowserRouter>
@@ -86,7 +102,6 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route path="/" exact render={() => <Home/>}/>
-
               <Route path="/createMeme" render={() => 
                 <CreateMeme 
                   ChangeTop ={this.onChangeTopText} 
@@ -95,9 +110,7 @@ class App extends Component {
                   Submit={this.onSubmit}
                   />
                 }/>
-
-
-              <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes}/>}/>
+              <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
               <Route path="/randomMeme" render={() => <RandomMeme state={this.state.memes}/>}/>
 
             </Switch>
