@@ -9,13 +9,13 @@ class EditMeme extends Component {
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
-        <div className="row">
+        <div className="row center">
           <div className="col s12 m7">
             <div className="card">
-              <div className="card-image">
-                <h1 className="">Top</h1>
-                <img className="" src="https://imgflip.com/s/meme/Is-This-A-Pigeon.jpg" alt=""/>
-                <h1 className="">Bottom</h1>
+              <div className="card-image align">
+                <h1 className="topText">{this.props.bottom_text}</h1>
+                <img className="image" src={this.props.image_url}/>
+                <h1 className="bottomText">{this.props.top_text}</h1>
               </div>
             </div>
           </div>

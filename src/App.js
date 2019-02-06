@@ -149,7 +149,6 @@ class App extends Component {
                     ChangeTop ={this.onChangeTopText}
                     ChangeBottom ={this.onChangeBottomText}
                     ChangeImg ={this.onChangeImgUrl}
-                    Submit={this.onSubmit}
                     />
                   }/>
               <Route path="/yourMemes" render={() => <YourMemes memes={this.state.memes} delete={this.delete}/>}/>
