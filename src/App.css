@@ -29,7 +29,14 @@ a {
 .wallpaper {
   background-image: url("https://sarahhurley365.files.wordpress.com/2015/08/step-1.jpg");
   background-size: cover;
-  height: 1000px;
+  height: 100%;
+}
+
+.space{
+  height: 800px;
+}
+.space1{
+  height: 500px;
 }
 
 .iconBack {
@@ -83,9 +90,14 @@ a {
   font-size: 5vw;
   font-size: 5vh;
 }
+.separate {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
 @media only screen and (min-width: 1000px) {
   .text{
-    font-size: 10vw;
-    font-size: 10vh;
+    font-size: 8vw;
+    font-size: 8vh;
   }
 }

@@ -3,7 +3,8 @@ import './App.css'
 import {
 Route,
 BrowserRouter,
-Switch
+Switch,
+NavLink
 } from "react-router-dom"
 
 import CreateMeme from './components/createMeme.js'
@@ -31,12 +32,12 @@ class App extends Component {
 
   onChangeTopText = (e) => {
     this.setState({
-      top_text: e.target.value,
+      top_text: e.target.value.toUpperCase(),
     })
   }
   onChangeBottomText = (e) => {
     this.setState({
-      bottom_text: e.target.value,
+      bottom_text: e.target.value.toUpperCase(),
     })
   }
   onChangeImgUrl = (e) => {
@@ -76,7 +77,7 @@ class App extends Component {
 
 
   delete = (event) => {
-    fetch(`http://localhost:3001/${event.target.id}`, {
+    fetch(`https://aqueous-peak-69240.herokuapp.com/${event.target.id}`, {
       method: 'DELETE'
     }).then(response => {response.json()})
     .then(data => data)
@@ -89,7 +90,7 @@ class App extends Component {
   }
 
   onSubmit = () => {
-    var url = 'http://localhost:3001/createMeme'
+    var url = 'https://aqueous-peak-69240.herokuapp.com'
     var data = {
       top_text: this.state.top_text,
       bottom_text: this.state.bottom_text,
@@ -125,7 +126,7 @@ class App extends Component {
     }
 
     edit = (event) => {
-      var url = `http://localhost:3001/${event.target.id}`
+      var url = `https://aqueous-peak-69240.herokuapp.com/${event.target.id}`
       var data = {
         top_text: this.state.top_text,
         bottom_text: this.state.bottom_text,
@@ -164,7 +165,16 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className="App wallpaper">
+          <nav>
+            <div class="nav-wrapper">
+              <NavLink exact to="/"><img className="left" src="https://fontmeme.com/permalink/190208/e53fe677035baef6db80bfaa9103baf3.png" alt="sabo-font" border="0"/></NavLink>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><NavLink exact to="/yourMemes" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn blue">Your Memes</NavLink></li>
+                <li><NavLink exact to="/randomMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn green">Random Meme</NavLink></li>
+              </ul>
+            </div>
+          </nav>
           <div className="content">
             <Switch>
               <Route path="/randomMeme" render={() => <RandomMeme
