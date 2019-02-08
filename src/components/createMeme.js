@@ -4,11 +4,12 @@ NavLink
 } from "react-router-dom"
 
 class CreateMeme extends Component {
-
   render() {
+    console.log(this.props)
+    let onClickFunction = this.props.status === "add" ? this.props.Submit : this.props.edit
     return (
       <div className="App">
-        <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
+        <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
         <div className="row center">
           <div className="col s12 m7">
             <div className="card">
@@ -36,7 +37,7 @@ class CreateMeme extends Component {
               </div>
             </div>
             <NavLink exact to="/yourMemes">
-              <button className="btn waves-effect waves-light" type="submit" name="action" onClick={this.props.Submit}>Submit
+              <button className="btn waves-effect waves-light" type="submit" name="action" id={this.props.id} onClick={onClickFunction}>Submit
                 <i className="material-icons right">send</i>
               </button>
             </NavLink>
