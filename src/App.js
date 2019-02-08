@@ -91,6 +91,7 @@ class App extends Component {
   onSubmit () {
     var url = 'http://localhost:3001/createMeme'
     var data = {
+      id: this.state.memes.length,
       top_text: this.state.top_text,
       bottom_text: this.state.bottom_text,
       image_url: this.state.image_url
@@ -139,8 +140,11 @@ class App extends Component {
         }).then(res => res.json())
           .then(response => console.log('Success:', JSON.stringify(response)))
           .catch(error => console.error('Error:', error));
+          let newMemes = [...this.state.memes].filter(memes => memes.id !== +event.target.id)
+          newMemes.push({...data, id: this.state.memes.length})
+          console.log(newMemes)
           this.setState({
-            memes: this.state.memes
+            memes: newMemes
           })
     }
 
