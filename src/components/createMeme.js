@@ -5,7 +5,9 @@ NavLink
 
 class CreateMeme extends Component {
 
+
   render() {
+
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
@@ -14,12 +16,14 @@ class CreateMeme extends Component {
             <div className="card">
               <div className="card-image align">
                 <h1 className="topText">{this.props.CardTop}</h1>
-                <img className="" src={this.props.CardImg} alt=""/>
+                <img className="" src={this.props.CardImg} alt="memeupload"/>
                 <h1 className="bottomText">{this.props.CardBottom}</h1>
               </div>
             </div>
           </div>
         </div>
+
+
         <div className="column">
             <div>
             <div className="input-field col s6">
