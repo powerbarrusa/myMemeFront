@@ -7,7 +7,7 @@ class RandomMeme extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App wallpaper">
         <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
         <p><button onClick={this.props.randomMeme} type="button" className="waves-effect waves-light btn red">Hit me with another!</button></p>
         <div className="row">
