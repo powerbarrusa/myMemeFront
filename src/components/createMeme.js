@@ -4,14 +4,14 @@ NavLink
 } from "react-router-dom"
 
 class CreateMeme extends Component {
-  
+
   render() {
     let onClickFunction = this.props.status === "add" ? this.props.Submit : this.props.edit
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
         <div className="row center">
-          <div className="col s12 m7">
+          <div className="col s12 m10 l8 offset-m1 offset-l2">
             <div className="card">
               <div className="card-image align">
                 <h1 className="topText">{this.props.CardTop}</h1>
@@ -41,6 +41,8 @@ class CreateMeme extends Component {
                 <i className="material-icons right">send</i>
               </button>
             </NavLink>
+          </div>
+          <div className="space1">
           </div>
         </div>
     );

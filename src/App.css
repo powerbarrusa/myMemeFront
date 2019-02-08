@@ -29,7 +29,14 @@ a {
 .wallpaper {
   background-image: url("https://sarahhurley365.files.wordpress.com/2015/08/step-1.jpg");
   background-size: cover;
-  height: 1000px;
+  height: 100%;
+}
+
+.space{
+  height: 800px;
+}
+.space1{
+  height: 500px;
 }
 
 .iconBack {

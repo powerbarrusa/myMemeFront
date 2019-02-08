@@ -164,7 +164,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className="App wallpaper">
           <div className="content">
             <Switch>
               <Route path="/randomMeme" render={() => <RandomMeme
