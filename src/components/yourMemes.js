@@ -21,7 +21,7 @@ class YourMemes extends Component {
                     </div>
                     <div className="align">
                       <h1 className="topText">{meme.top_text}</h1>
-                      <img className="image" src={meme.image_url}></img>
+                      <img className="image" alt="" src={meme.image_url}></img>
                       <h1 className="bottomText">{meme.bottom_text}</h1>
                     </div>
                   </div>
