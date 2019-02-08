@@ -9,14 +9,14 @@ class YourMemes extends Component {
     return (
       <div className="App">
         <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
-        {this.props.memes ? this.props.memes.map(meme => {
+        {this.props.memes ? this.props.memes.map((meme, idx) => {
           return (
             <div className="row center">
               <div className="col s12 m7">
                 <div className="card">
                   <div className="card-image">
                     <div className="icons">
-                      <NavLink exact to="/editMeme"><i className="material-icons iconBack">create</i></NavLink>
+                      <NavLink exact to="/createMeme" onClick={this.props.statusEdit}><i className="material-icons iconBack" id={meme.id}>create</i></NavLink>
                       <i className="material-icons iconBack" id={meme.id} onClick={this.props.delete}>delete</i>
                     </div>
                     <div className="align">
