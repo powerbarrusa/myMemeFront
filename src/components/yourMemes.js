@@ -7,12 +7,11 @@ class YourMemes extends Component {
 
   render() {
     return (
-      <div className="App wallpaper">
-        <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
+      <div className="App">
         {this.props.memes ? this.props.memes.map((meme, idx) => {
           return (
             <div className="row center">
-              <div className="col s12 m10 l10 offset-m1 offset-l1">
+              <div className="col s12 m10 l6 offset-m1 offset-l3">
                 <div className="card">
                   <div className="card-image">
                     <div className="align">
@@ -33,7 +32,7 @@ class YourMemes extends Component {
         ""
       }
       </div>
-    )
+    );
   }
 }
 
