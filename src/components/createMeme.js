@@ -9,7 +9,7 @@ class CreateMeme extends Component {
     let onClickFunction = this.props.status === "add" ? this.props.Submit : this.props.edit
     return (
       <div className="App">
-        <NavLink exact to="/"><i className="material-icons">home</i></NavLink>
+        <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
         <div className="row center">
           <div className="col s12 m7">
             <div className="card">
