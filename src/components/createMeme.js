@@ -4,8 +4,8 @@ NavLink
 } from "react-router-dom"
 
 class CreateMeme extends Component {
+  
   render() {
-    console.log(this.props)
     let onClickFunction = this.props.status === "add" ? this.props.Submit : this.props.edit
     return (
       <div className="App">
