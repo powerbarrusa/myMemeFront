@@ -13,8 +13,8 @@ class Home extends Component {
           <NavLink exact to="/yourMemes" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn blue">Your Memes</NavLink>
           <NavLink exact to="/randomMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn green">Random Meme</NavLink>
         </div>
-    )
-  }
-}
+        )
+      }
+    }
 
 export default Home

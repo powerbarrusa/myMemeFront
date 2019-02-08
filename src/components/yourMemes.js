@@ -7,7 +7,7 @@ class YourMemes extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App wallpaper">
         <NavLink exact to="/"><i className="material-icons iconLeft">home</i></NavLink>
         {this.props.memes ? this.props.memes.map((meme, idx) => {
           return (
@@ -33,7 +33,7 @@ class YourMemes extends Component {
         ""
       }
       </div>
-    );
+    )
   }
 }
 
