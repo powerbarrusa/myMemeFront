@@ -104,15 +104,16 @@ class App extends Component {
       headers: {
         'Content-Type': 'application/json'
       }
-      }).then(res => res.json())
-        .then(response => console.log('Success:', JSON.stringify(response)))
-        .catch(error => console.error('Error:', error));
-        let newMemes = [...this.state.memes]
-        newMemes.push({...data, id: this.state.memes.length})
-        this.setState({
-          memes: newMemes
-        })
-    }
+    })
+    .then(res => res.json())
+    .then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
+    let newMemes = [...this.state.memes]
+    newMemes.push({...data, id: this.state.memes.length})
+    this.setState({
+      memes: newMemes
+    })
+  }
 
     statusAdd = (event) => {
       this.setState({
@@ -147,7 +148,7 @@ class App extends Component {
           this.setState({
             memes: newMemes
           })
-    }
+        }
 
     statusEdit = (event) => {
       let correctMeme = this.state.memes.filter(meme => meme.id === +event.target.id)
@@ -196,8 +197,8 @@ class App extends Component {
           </div>
         </div>
       </BrowserRouter>
-    )
+      )
+    }
   }
-}
 
 export default App

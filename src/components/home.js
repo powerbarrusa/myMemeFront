@@ -9,12 +9,13 @@ class Home extends Component {
     return (
         <div className="row wallpaper">
           <img src="https://fontmeme.com/permalink/190208/e53fe677035baef6db80bfaa9103baf3.png" alt="sabo-font" border="0" />
+          <h4>Welcome to myMeme! A place to keep your memes, if you will. A one-stop-shop, simple website allowing you to freely create and edit your own memes, ad-free, and pop-up free. Did we mention free?</h4>
           <NavLink exact to="/createMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn red">Make a Meme</NavLink>
           <NavLink exact to="/yourMemes" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn blue">Your Memes</NavLink>
           <NavLink exact to="/randomMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn green">Random Meme</NavLink>
         </div>
-    )
-  }
-}
+        )
+      }
+    }
 
 export default Home
