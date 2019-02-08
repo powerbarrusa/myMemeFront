@@ -88,7 +88,7 @@ class App extends Component {
     })
   }
 
-  onSubmit () {
+  onSubmit = () => {
     var url = 'http://localhost:3001/createMeme'
     var data = {
       top_text: this.state.top_text,
