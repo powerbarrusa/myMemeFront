@@ -47,7 +47,7 @@ class App extends Component {
 
   async componentDidMount(){
     try {
-      const api = await fetch('http://localhost:3001')
+      const api = await fetch('https://aqueous-peak-69240.herokuapp.com')
       const memes = await api.json()
       this.setState({
         memes: memes
@@ -88,7 +88,7 @@ class App extends Component {
     })
   }
 
-  onSubmit () {
+  onSubmit = () => {
     var url = 'http://localhost:3001/createMeme'
     var data = {
       top_text: this.state.top_text,
