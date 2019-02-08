@@ -15,7 +15,7 @@ class CreateMeme extends Component {
             <div className="card">
               <div className="card-image align">
                 <h1 className="topText">{this.props.CardTop}</h1>
-                <img className="" src={this.props.CardImg} alt="memeupload"/>
+                <img className="" src={this.props.CardImg} alt=""/>
                 <h1 className="bottomText">{this.props.CardBottom}</h1>
               </div>
             </div>
