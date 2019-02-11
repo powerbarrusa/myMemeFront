@@ -167,16 +167,15 @@ class App extends Component {
       <BrowserRouter>
         <div className="App wallpaper">
           <nav>
-            <div class="nav-wrapper">
+            <div className="nav-wrapper">
               <NavLink exact to="/"><img className="left" src="https://fontmeme.com/permalink/190208/e53fe677035baef6db80bfaa9103baf3.png" alt="sabo-font" border="0"/></NavLink>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><NavLink exact to="/yourMemes" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn blue">Your Memes</NavLink></li>
                 <li><NavLink exact to="/randomMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn green">Random Meme</NavLink></li>
               </ul>
             </div>
           </nav>
           <div className="content">
-            <Switch>
               <Route path="/randomMeme" render={() => <RandomMeme
                   memes={this.state.memes}
                   randomMeme={this.randomMeme}
@@ -185,7 +184,10 @@ class App extends Component {
                   randomBottomText={this.state.randomBottomText}
                 />}
               />
-              <Route path="/" exact render={() => <Home statusAdd={this.statusAdd}/>}/>
+              <Route path="/" exact render={() =>
+                <Home statusAdd={this.statusAdd}
+                />
+              }/>
 
               <Route path="/createMeme" render={() =>
                 <CreateMeme
@@ -202,8 +204,13 @@ class App extends Component {
                   id={this.state.selectedId}
                   />
                 }/>
-              <Route path="/yourMemes" render={() => <YourMemes statusEdit={this.statusEdit} memes={this.state.memes} delete={this.delete}/>}/>
-            </Switch>
+              <Route path="/yourMemes" render={() =>
+                <YourMemes
+                  statusEdit={this.statusEdit}
+                  memes={this.state.memes}
+                  delete={this.delete}
+                  />
+                }/>
           </div>
         </div>
       </BrowserRouter>

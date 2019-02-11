@@ -20,7 +20,7 @@ class YourMemes extends Component {
                         <i className="material-icons iconBack" id={meme.id} onClick={this.props.delete}>delete</i>
                       </div>
                       <h1 className="topText flow-text text">{meme.top_text}</h1>
-                      <img className="image responsive-img" src={meme.image_url}></img>
+                      <img className="image responsive-img" src={meme.image_url} alt=""></img>
                       <h1 className="bottomText flow-text text">{meme.bottom_text}</h1>
                     </div>
                   </div>
