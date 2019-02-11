@@ -18,8 +18,6 @@ class Home extends Component {
           </div>
         </div>
         <NavLink exact to="/createMeme" className="z-depth-5 col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn red separate" onClick={this.props.statusAdd}>Make a Meme</NavLink>
-        <div className="space">
-        </div>
       </div>
     );
   }

@@ -3,7 +3,6 @@ import './App.css'
 import {
 Route,
 BrowserRouter,
-Switch,
 NavLink
 } from "react-router-dom"
 

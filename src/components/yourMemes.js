@@ -10,7 +10,7 @@ class YourMemes extends Component {
       <div className="App">
         {this.props.memes ? this.props.memes.map((meme, idx) => {
           return (
-            <div className="row center">
+            <div className="row center" key={idx}>
               <div className="col s12 m10 l6 offset-m1 offset-l3">
                 <div className="card">
                   <div className="card-image">
