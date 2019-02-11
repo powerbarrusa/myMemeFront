@@ -43,8 +43,6 @@ class CreateMeme extends Component {
               </button>
             </NavLink>
           </div>
-          <div className="space1">
-          </div>
         </div>
     );
   }
