@@ -44,7 +44,7 @@ class CreateMeme extends Component {
           <div className="space1">
           </div>
         </div>
-    );
+    )
   }
 }
 export default CreateMeme
