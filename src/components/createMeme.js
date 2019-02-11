@@ -44,7 +44,7 @@ class CreateMeme extends Component {
             </NavLink>
           </div>
         </div>
-    );
+    )
   }
 }
 export default CreateMeme

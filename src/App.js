@@ -24,7 +24,8 @@ class App extends Component {
       bottom_text: "",
       image_url: "",
       status: "",
-      selectedId: ""
+      selectedId: "",
+      randomPageWallpaper: true
     }
     this.onSubmit = this.onSubmit.bind(this)
   }
@@ -68,6 +69,7 @@ class App extends Component {
     const randomIndex = this.getRandom(this.state.memes.length)
       const randomMeme = this.state.memes[randomIndex]
       this.setState({
+        randomPageWallpaper: false,
         hasMeme: true,
         randomMemeImg: randomMeme.image_url,
         randomTopText: randomMeme.top_text,
@@ -182,6 +184,7 @@ class App extends Component {
                   randomMemeImg={this.state.randomMemeImg}
                   randomTopText={this.state.randomTopText}
                   randomBottomText={this.state.randomBottomText}
+                  randomPageWallpaper={this.state.randomPageWallpaper}
                 />}
               />
               <Route path="/" exact render={() =>
