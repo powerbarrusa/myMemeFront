@@ -8,10 +8,10 @@ class Home extends Component {
   render() {
     return (
       <div className="row separate">
-        <div class="row">
-          <div class="col s12 m10 l6 offset-m1 offset-l3">
-            <div class="card-panel teal">
-              <span class="white-text">
+        <div className="row">
+          <div className="col s12 m10 l6 offset-m1 offset-l3">
+            <div className="card-panel teal">
+              <span className="white-text">
                 <h4>Welcome to myMeme! A place to keep your memes, if you will. A one-stop-shop, simple website allowing you to freely create and edit your own memes, ad-free, and pop-up free. Did we mention free?</h4>
               </span>
             </div>
