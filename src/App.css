@@ -27,9 +27,14 @@ a {
 }
 
 .wallpaper {
-  background-image: url("https://sarahhurley365.files.wordpress.com/2015/08/step-1.jpg");
+  /* background-image: url("https://sarahhurley365.files.wordpress.com/2015/08/step-1.jpg");
   background-size: cover;
-  height: 100%;
+  height: 100%; */
+  background-image:url("https://sarahhurley365.files.wordpress.com/2015/08/step-1.jpg");
+
+   background-repeat:no-repeat;
+
+   background-size:cover;
 }
 
 .space{
