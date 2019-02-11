@@ -20,6 +20,8 @@ class CreateMeme extends Component {
             </div>
           </div>
         </div>
+
+
         <div className="column">
             <div>
             <div className="input-field col s6">
