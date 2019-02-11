@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   onSubmit = () => {
-    var url = 'https://aqueous-peak-69240.herokuapp.com'
+    var url = 'https://aqueous-peak-69240.herokuapp.com/createMeme'
     var data = {
       top_text: this.state.top_text,
       bottom_text: this.state.bottom_text,
