@@ -176,7 +176,6 @@ class App extends Component {
             </div>
           </nav>
           <div className="content">
-            <Switch>
               <Route path="/randomMeme" render={() => <RandomMeme
                   memes={this.state.memes}
                   randomMeme={this.randomMeme}
@@ -185,7 +184,10 @@ class App extends Component {
                   randomBottomText={this.state.randomBottomText}
                 />}
               />
-              <Route path="/" exact render={() => <Home statusAdd={this.statusAdd}/>}/>
+              <Route path="/" exact render={() =>
+                <Home statusAdd={this.statusAdd}
+                />
+              }/>
 
               <Route path="/createMeme" render={() =>
                 <CreateMeme
@@ -202,8 +204,13 @@ class App extends Component {
                   id={this.state.selectedId}
                   />
                 }/>
-              <Route path="/yourMemes" render={() => <YourMemes statusEdit={this.statusEdit} memes={this.state.memes} delete={this.delete}/>}/>
-            </Switch>
+              <Route path="/yourMemes" render={() =>
+                <YourMemes
+                  statusEdit={this.statusEdit}
+                  memes={this.state.memes}
+                  delete={this.delete}
+                  />
+                }/>
           </div>
         </div>
       </BrowserRouter>
